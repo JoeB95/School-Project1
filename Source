@@ -1,0 +1,76 @@
+#include <iostream>
+using namespace std;
+
+void clearCin() {
+    cin.clear();
+    cin.ignore(32768, '\n');
+}
+
+
+
+int main() {
+
+    int weight1 = 0;
+    int weight2 = 0;
+    int combinedWeight = 0;
+    bool keepGoing = true;
+
+while(keepGoing){
+
+    while(keepGoing) {
+
+        cout << "Enter the weight of the first astronaut: (-999 to quit) ";
+        cin >> weight1;
+        clearCin();
+        if(weight1 == -999){
+            keepGoing = false;
+            break;
+        }
+
+        if (weight1 < 50 || weight1 > 200) {
+            cout << "Error: weight must be between 50 and 200" << endl;
+        }
+        else {
+            break;
+        }
+
+    } //2nd while
+
+    while(keepGoing) {
+
+        cout << "Enter the weight of the second astronaut: (-999 to quit) ";
+        cin >> weight2;
+        clearCin();
+        if(weight2 == -999){
+            keepGoing = false;
+            break;
+        }
+
+        if (weight2 < 50 || weight2 > 200) {
+            cout << "Error: weight must be between 50 and 200" << endl;
+        }
+        else {
+            break;
+        }
+
+    } //3rd while
+
+    if (keepGoing){
+
+
+        combinedWeight = weight1 + weight2;
+
+        if (combinedWeight > 320) {
+            cout << "Too heavy, use the zero-G gym" << endl;
+        }
+        else {
+            cout << "Landing granted. Welcome home!" << endl;
+        }
+    }
+
+
+}//1st while
+    cout << "Program Ending have a nice day!" << endl; // end of program
+    return 0;
+}
+
